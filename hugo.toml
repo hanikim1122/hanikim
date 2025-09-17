@@ -1,0 +1,9 @@
+baseURL = "/"
+languageCode = "ko-kr"
+title = "Hani Site"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[pagination]
+pagerSize = 20

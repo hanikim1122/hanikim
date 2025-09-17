@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Hani Site</title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on Hani Site</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 21 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>수영</title>
+      <link>//localhost:1313/tags/%EC%88%98%EC%98%81/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/%EC%88%98%EC%98%81/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>연습</title>
+      <link>//localhost:1313/tags/%EC%97%B0%EC%8A%B5/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/%EC%97%B0%EC%8A%B5/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
