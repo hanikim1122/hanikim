@@ -1,0 +1,49 @@
+{{/* 단일 글 페이지 (예: /notebook/swim/250911-swimdiary/) */}}
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ .Title }} | Hani Site</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="/#home"><img src="/images/home_logo.png" alt="hani kim 로고" /></a>
+      <nav>
+        <a href="/#about"><img class="menu-image" src="/images/menu_about.png" alt="about"></a>
+        <a href="/#illustration"><img class="menu-image" src="/images/menu_illust.png" alt="illustration"></a>
+        <a href="/#moreworks"><img class="menu-image" src="/images/menu_more.png" alt="moreworks"></a>
+        <a href="/#notebook-main"><img class="menu-image" src="/images/menu_note.png" alt="notebook"></a>
+        <a href="/#palette"><img class="menu-image" src="/images/menu_sketch.png" alt="palette"></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-container">
+    <section class="notebook-category">
+      <!-- 가운데 정렬되는 본문 래퍼 -->
+      <div class="section-inner" style="max-width: 860px; margin: 0 auto;">
+
+        <h1 class="post-title" style="text-align:left; margin-bottom:.25rem;">
+          {{ .Title }}
+        </h1>
+        <p class="detail-meta" style="text-align:left; margin-bottom:1.25rem;">
+          {{ .Date.Format "2006-01-02" }}
+        </p>
+
+        <div class="post-content" style="text-align:left;">
+          {{ .Content }}
+        </div>
+
+        <!-- 하단 가운데 '목록으로' 버튼 -->
+        <div class="post-back-center" style="text-align:center; margin:2rem 0 0;">
+          <a class="back-button" href="{{ .CurrentSection.RelPermalink }}">← 목록으로</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

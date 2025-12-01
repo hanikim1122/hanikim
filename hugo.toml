@@ -1,4 +1,6 @@
 baseURL = "https://hanisdesk.com/"
+publishDir = "docs"
+relativeURLs = false
 languageCode = "ko-kr"
 title = "Hani Site"
 

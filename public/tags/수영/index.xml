@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>수영 on Hani Site</title>
-    <link>//localhost:1313/tags/%EC%88%98%EC%98%81/</link>
+    <link>http://localhost:1313/tags/%EC%88%98%EC%98%81/</link>
     <description>Recent content in 수영 on Hani Site</description>
     <generator>Hugo</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 21 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/%EC%88%98%EC%98%81/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%EC%88%98%EC%98%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>접영은 왜 하는걸까</title>
-      <link>//localhost:1313/notebook/swim/250821-first/</link>
+      <link>http://localhost:1313/notebook/swim/250821-first/</link>
       <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/notebook/swim/250821-first/</guid>
+      <guid>http://localhost:1313/notebook/swim/250821-first/</guid>
       <description>수영의 가장 큰 문제점은… 내 자세를 나 스스로 볼 수 없다는 것</description>
     </item>
   </channel>

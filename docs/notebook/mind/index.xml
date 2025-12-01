@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>그냥 스쳐 지나가는 마음기록 on Hani Site</title>
+    <link>https://hanisdesk.com/notebook/mind/</link>
+    <description>Recent content in 그냥 스쳐 지나가는 마음기록 on Hani Site</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <atom:link href="https://hanisdesk.com/notebook/mind/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

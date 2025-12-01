@@ -1,4 +1,5 @@
 ---
-title: "작은상상 이야기"
-layout: notebook-category
+title: "작은 상상 이야기"
+type: notebook
+layout: notebook
 ---

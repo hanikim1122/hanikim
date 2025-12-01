@@ -1,4 +1,5 @@
 ---
-title: "물이 좋은 초보인의 헤엄일기"
-layout: notebook-category
+title: "물이 좋은 초보인어의 헤엄일기"
+type: notebook
+layout: notebook
 ---

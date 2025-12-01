@@ -2,40 +2,83 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>{{ .Title }} | hani kim</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Title }} | hani kim</title>
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/stylesheet.css" />
 </head>
 <body>
-  <!-- 헤더: 홈과 동일 -->
+  <!-- 공통 헤더 -->
   <header>
     <div class="header-inner">
       <div class="logo">
         <a href="{{ "/" | relURL }}"><img src="/images/home_logo.png" alt="hani kim 로고" /></a>
       </div>
       <nav>
-        <a href="#about"><img src="/images/menu_about.png" alt="about" class="menu-image" /></a>
-        <a href="#illustration"><img src="/images/menu_illust.png" alt="illustration" class="menu-image" /></a>
-        <a href="#moreworks"><img src="/images/menu_more.png" alt="moreworks" class="menu-image" /></a>
-        <a href="#notebook-main"><img src="/images/menu_note.png" alt="notebook" class="menu-image" /></a>
-        <a href="#palette"><img src="/images/menu_sketch.png" alt="palette" class="menu-image" /></a>
+        <a href="/#about"><img src="/images/menu_about.png" alt="about" class="menu-image" /></a>
+        <a href="/#illustration"><img src="/images/menu_illust.png" alt="illustration" class="menu-image" /></a>
+        <a href="/#moreworks"><img src="/images/menu_more.png" alt="moreworks" class="menu-image" /></a>
+        <a href="/notebook/"><img src="/images/menu_note.png" alt="notebook" class="menu-image" /></a>
+        <a href="/#palette"><img src="/images/menu_sketch.png" alt="palette" class="menu-image" /></a>
       </nav>
+
     </div>
   </header>
 
   <main id="main-container">
-    <section id="notebook-list" class="section-inner">
-      <h1 class="page-title" style="margin:16px 0 24px">{{ .Title }}</h1>
-      <ul class="post-list" style="list-style:none;padding:0;margin:0">
-        {{ range .Pages.ByDate.Reverse }}
-          <li class="post-item" style="margin:10px 0; display:flex; gap:8px; align-items:baseline;">
-            <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <span class="post-date" style="color:#777; font-size:14px;">{{ .Date.Format "2006-01-02" }}</span>
-          </li>
-        {{ end }}
-      </ul>
-    </section>
+    {{/* notebook 계열 섹션이면 -> 너의 레이아웃 */}}
+    {{ if eq .Section "notebook" }}
+
+      {{ if .Sections }}
+        <!-- /notebook/ (카테고리 카드) -->
+        <section id="notebook-main" class="section-inner" style="padding-top:12px;">
+          <img src="/images/note.png" alt="" class="section-label" style="display:block;margin:0 auto 12px;">
+          <div class="notebook-grid">
+            <div class="notebook-menu">
+              {{ range .Sections.ByTitle }}
+                <div class="notebook-item">
+                  <a class="notebook-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  <span class="notebook-arrow">➜</span>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </section>
+      {{ else }}
+        <!-- /notebook/<섹션>/ (네가 만든 리스트 스타일) -->
+        <section class="notebook-category" id="notebook-{{ .Title | urlize }}">
+          <div class="section-inner">
+            <div class="notebook-post-list">
+              <div class="post">
+                <h2>{{ .Title }}</h2>
+                <hr class="notebook-divider" />
+                {{ range .RegularPages.ByDate.Reverse }}
+                  <div class="post-title">
+                    <a href="{{ .RelPermalink }}">
+                      {{ .Date.Format "060102" }} ---- {{ .Title }}
+                    </a>
+                  </div>
+                {{ end }}
+              </div>
+            </div>
+            {{ with .Parent }}
+              <a class="back-button" href="{{ .RelPermalink }}">←back</a>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
+
+    {{ else }}
+      {{/* notebook 외 섹션은 기존 Hug​o 기본 마크업(필요하면 여기도 꾸며줘) */}}
+      <section class="section-inner" style="max-width:760px;margin:40px auto">
+        <h1>{{ .Title }}</h1>
+        <ul>
+          {{ range .RegularPages.ByDate.Reverse }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <small>{{ .Date.Format "2006-01-02" }}</small></li>
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
   </main>
 
   <script src="/js/script.js"></script>

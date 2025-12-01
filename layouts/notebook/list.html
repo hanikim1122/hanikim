@@ -1,0 +1,53 @@
+{{/* layouts/notebook/list.html - 노트북 섹션 리스트(제목만) */}}
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ .Title }} | Hani Site</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preload" as="image" href="/images/note.png" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="/#home"><img src="/images/home_logo.png" alt="hani kim 로고" /></a>
+      <nav>
+        <a href="/#about"><img class="menu-image" src="/images/menu_about.png" alt="about"></a>
+        <a href="/#illustration"><img class="menu-image" src="/images/menu_illust.png" alt="illustration"></a>
+        <a href="/#moreworks"><img class="menu-image" src="/images/menu_more.png" alt="moreworks"></a>
+        <a href="/#notebook-main"><img class="menu-image" src="/images/menu_note.png" alt="notebook"></a>
+        <a href="/#palette"><img class="menu-image" src="/images/menu_sketch.png" alt="palette"></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-container">
+    <section class="notebook-category">
+      <div class="section-inner post-list">
+        <h2 class="post-list-title">{{ .Title }}</h2>
+
+        <div class="notebook-post-list">
+          {{ range .Pages.ByDate.Reverse }}
+            <div class="post">
+              <a class="post-title" href="{{ .RelPermalink }}">
+                {{ .Date.Format "060102" }} —— {{ .Title }}
+              </a>
+            </div>
+            <hr class="notebook-divider">
+          {{ end }}
+
+          {{ if not .Pages }}
+            <p>아직 글이 없어요.</p>
+          {{ end }}
+        </div>
+
+        <div class="post-back-center">
+          <a class="back-button" href="/#notebook-main">← 목록으로</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

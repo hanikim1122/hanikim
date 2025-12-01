@@ -1,55 +1,69 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="ko">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="UTF-8" />
-  <title>Notebooks | hani kim</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <title>Notebooks | Hani Site</title>
   <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/stylesheet.css" />
+  <link rel="preload" as="image" href="/images/note.png" />
 </head>
 <body>
-  
   <header>
     <div class="header-inner">
-      <div class="logo">
-        <a href="/"><img src="/images/home_logo.png" alt="hani kim 로고" /></a>
-      </div>
+      <a class="logo" href="/#home"><img src="/images/home_logo.png" alt="hani kim 로고" /></a>
       <nav>
-        <a href="#about"><img src="/images/menu_about.png" alt="about" class="menu-image" /></a>
-        <a href="#illustration"><img src="/images/menu_illust.png" alt="illustration" class="menu-image" /></a>
-        <a href="#moreworks"><img src="/images/menu_more.png" alt="moreworks" class="menu-image" /></a>
-        <a href="#notebook-main"><img src="/images/menu_note.png" alt="notebook" class="menu-image" /></a>
-        <a href="#palette"><img src="/images/menu_sketch.png" alt="palette" class="menu-image" /></a>
+        <a href="/#about"><img class="menu-image" src="/images/menu_about.png" alt="about"></a>
+        <a href="/#illustration"><img class="menu-image" src="/images/menu_illust.png" alt="illustration"></a>
+        <a href="/#moreworks"><img class="menu-image" src="/images/menu_more.png" alt="moreworks"></a>
+        <a href="/#notebook-main"><img class="menu-image" src="/images/menu_note.png" alt="notebook"></a>
+        <a href="/#palette"><img class="menu-image" src="/images/menu_sketch.png" alt="palette"></a>
       </nav>
     </div>
   </header>
 
   <main id="main-container">
-    <section id="notebook-list" class="section-inner">
-      <h1 class="page-title" style="margin:16px 0 24px">Notebooks</h1>
-      <ul class="post-list" style="list-style:none;padding:0;margin:0">
-        
-          <li class="post-item" style="margin:10px 0; display:flex; gap:8px; align-items:baseline;">
-            <a class="post-link" href="/notebook/swim/">물이 좋은 초보인의 헤엄일기</a>
-            <span class="post-date" style="color:#777; font-size:14px;">2025-09-11</span>
-          </li>
-        
-          <li class="post-item" style="margin:10px 0; display:flex; gap:8px; align-items:baseline;">
-            <a class="post-link" href="/notebook/story/">작은상상 이야기</a>
-            <span class="post-date" style="color:#777; font-size:14px;">0001-01-01</span>
-          </li>
-        
-          <li class="post-item" style="margin:10px 0; display:flex; gap:8px; align-items:baseline;">
-            <a class="post-link" href="/notebook/record/">엉망뚱땅 뜨개기록</a>
-            <span class="post-date" style="color:#777; font-size:14px;">0001-01-01</span>
-          </li>
-        
-          <li class="post-item" style="margin:10px 0; display:flex; gap:8px; align-items:baseline;">
-            <a class="post-link" href="/notebook/mind/">그냥 스쳐 지나가는 마음기록</a>
-            <span class="post-date" style="color:#777; font-size:14px;">0001-01-01</span>
-          </li>
-        
-      </ul>
+    <section class="notebook-category">
+      <div class="section-inner post-list">
+        <h2 class="post-list-title">Notebooks</h2>
+
+        <div class="notebook-post-list">
+          
+            <div class="post">
+              <a class="post-title" href="/notebook/swim/">
+                251201 —— 물이 좋은 초보인어의 헤엄일기
+              </a>
+            </div>
+            <hr class="notebook-divider">
+          
+            <div class="post">
+              <a class="post-title" href="/notebook/story/">
+                010101 —— 작은 상상 이야기
+              </a>
+            </div>
+            <hr class="notebook-divider">
+          
+            <div class="post">
+              <a class="post-title" href="/notebook/knit/">
+                010101 —— 엉망뚱땅 뜨개기록
+              </a>
+            </div>
+            <hr class="notebook-divider">
+          
+            <div class="post">
+              <a class="post-title" href="/notebook/mind/">
+                010101 —— 그냥 스쳐 지나가는 마음기록
+              </a>
+            </div>
+            <hr class="notebook-divider">
+          
+
+          
+        </div>
+
+        <div class="post-back-center">
+          <a class="back-button" href="/#notebook-main">← 목록으로</a>
+        </div>
+      </div>
     </section>
   </main>
 
